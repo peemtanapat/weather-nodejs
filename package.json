@@ -10,7 +10,9 @@
   "keywords": [
     "weather",
     "weather-app",
-    "webapp"
+    "webapp",
+    "weatherstack",
+    "mapbox"
   ],
   "author": "peemtanapat",
   "license": "ISC",
