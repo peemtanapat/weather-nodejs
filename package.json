@@ -5,7 +5,7 @@
     "main": "index.js",
     "scripts": {
         "start": "env-cmd -f config/.env node src/app.js",
-        "dev": "env-cmd -f config/.env nodemon src/app.js -e js/hbs",
+        "dev": "env-cmd -f config/.env nodemon src/app.js -e js,hbs",
         "pretty": "prettier --write \"./**/*.{js,jsx,json}\""
     },
     "prettier": {
