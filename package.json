@@ -1,27 +1,35 @@
 {
-  "name": "web-server",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "start": "node src/app.js",
-    "dev": "nodemon src/app.js -e js/hbs"
-  },
-  "keywords": [
-    "weather",
-    "weather-app",
-    "webapp",
-    "weatherstack",
-    "mapbox"
-  ],
-  "author": "peemtanapat",
-  "license": "ISC",
-  "dependencies": {
-    "express": "^4.17.1",
-    "hbs": "^4.1.1",
-    "request": "^2.88.2"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.6"
-  }
+    "name": "web-server",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "node src/app.js",
+        "dev": "nodemon src/app.js -e js/hbs",
+        "pretty": "prettier --write \"./**/*.{js,jsx,json}\""
+    },
+    "prettier": {
+        "trailingComma": "none",
+        "tabWidth": 4,
+        "semi": false,
+        "singleQuote": true
+    },
+    "keywords": [
+        "weather",
+        "weather-app",
+        "webapp",
+        "weatherstack",
+        "mapbox"
+    ],
+    "author": "peemtanapat",
+    "license": "ISC",
+    "dependencies": {
+        "express": "^4.17.1",
+        "hbs": "^4.1.1",
+        "request": "^2.88.2"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.6",
+        "prettier": "^2.2.1"
+    }
 }
