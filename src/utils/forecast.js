@@ -45,8 +45,8 @@ function forecast(latitude, longtitude, callback) {
 }
 
 const getURLForecast = (latitude, longtitude) => {
-    // unit identifiers 's' for Scientific(Celsius), 'f' for Fahrenheit
-    const units = 's'
+    // unit identifiers 'm' for Metric(Celsius), 'f' for Fahrenheit
+    const units = 'm'
     return `http://api.weatherstack.com/current?access_key=${process.env.WEATHERSTACK_ACCESS_KEY}&query=${latitude},${longtitude}&units=${units}`
 }
 
