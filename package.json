@@ -5,7 +5,7 @@
     "main": "index.js",
     "scripts": {
         "start": "env-cmd -f config/.env node src/app.js",
-        "dev": "env-cmd -f config/.env nodemon src/app.js -e js,hbs",
+        "dev": "env-cmd -f config/.env nodemon src/app.js -e js,hbs,json",
         "pretty": "prettier --write \"./**/*.{js,jsx,json}\""
     },
     "prettier": {
@@ -24,12 +24,12 @@
     "author": "peemtanapat",
     "license": "ISC",
     "dependencies": {
+        "env-cmd": "^10.1.0",
         "express": "^4.17.1",
         "hbs": "^4.1.1",
         "request": "^2.88.2"
     },
     "devDependencies": {
-        "env-cmd": "^10.1.0",
         "nodemon": "^2.0.6",
         "prettier": "^2.2.1"
     }
