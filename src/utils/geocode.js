@@ -27,14 +27,9 @@ const generateGeocode = (address, callback) => {
 function getURLGeocode(address) {
     const addressEncoded = encodeURIComponent(address)
     const endpoint = `https://api.mapbox.com/geocoding/v5/mapbox.places/${addressEncoded}.json`
-    const access_token =
-        'access_token=pk.eyJ1IjoicGVlbXRhbmFwYXQiLCJhIjoiY2tpcmdjZ29iMDB5ZzJ3cGp0cWR1dWoxcyJ9.iUWz9WeKfD3XIvdd1ETO-w'
-    const option = 'limit=1'
-
-    return `${endpoint}?${access_token}&${option}`
+    const access_token = `access_token=${process.env.MAPBOX_ACCESS_TOKEN}`
+    return `${endpoint}?${access_token}`
 }
-// (
-//   "https://api.mapbox.com/geocoding/v5/mapbox.places/12whatxxxxxx.json?access_token=pk.eyJ1IjoicGVlbXRhbmFwYXQiLCJhIjoiY2tpcmdjZ29iMDB5ZzJ3cGp0cWR1dWoxcyJ9.iUWz9WeKfD3XIvdd1ETO-w&limit=1"
-// );
+//  e.g. "https://api.mapbox.com/geocoding/v5/mapbox.places/bangkok.json?access_token=abc"
 
 module.exports = { generateGeocode, getURLGeocode }

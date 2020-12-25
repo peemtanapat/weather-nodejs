@@ -45,7 +45,7 @@ function forecast(latitude, longtitude, callback) {
 }
 
 const getURLForecast = (latitude, longtitude) => {
-    return `http://api.weatherstack.com/current?access_key=9a0bcd3c721de061e9a528ad9f22b327&query=${latitude},${longtitude}&units=f`
+    return `http://api.weatherstack.com/current?access_key=${process.env.WEATHERSTACK_ACCESS_KEY}&query=${latitude},${longtitude}&units=f`
 }
 
 module.exports = { forecast, getURLForecast, forecastWithGeocode }
